@@ -1,14 +1,26 @@
-function Login() {
-    return (
-        <>
-           <>
-           <h1>login page</h1>
-           <h1> page</h1>
-           <h1> page</h1>
+import { useState } from "react"
+
+function Login (){
+  const login =()=>{
+const [formData, setFormData] = useState({
+  cnic: "",
+  password: ""
+});
+ 
+
+ }
 
 
-           </>
-        </>
-        )
+  return (
+    <>
+    
+    
+    
+    
+    
+    
+    
+    </>
+  )
 }
-export default Login 
+export default Login
