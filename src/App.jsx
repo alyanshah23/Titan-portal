@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom"
 
-import Login from "./My Components/Login"
-
+import Login from "./My Components/Login.jsx"
+import "./index.css"
 function App() {
     return (
         // <Routes>

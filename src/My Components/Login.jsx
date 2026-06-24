@@ -1,5 +1,7 @@
+
 import { useState } from "react";
 import { RiEyeOffFill, RiEyeFill } from "react-icons/ri";
+
 const Login = () => {
   const [formData, setFormData] = useState({
     cnic: "",
@@ -21,15 +23,13 @@ const Login = () => {
   const validateForm = () => {
     let newErrors = {};
 
-    // FIX: CNIC checks are now a proper if / else-if chain,
-    // so "CNIC is required" no longer gets silently overwritten.
     if (!formData.cnic.trim()) {
       newErrors.cnic = "CNIC is required";
     } else if (!/^\d{5}-\d{7}-\d{1}$/.test(formData.cnic.trim())) {
-      newErrors.cnic =alert("Valid CNIC format required");
+        newErrors.cnic = "CNIC must be in the format 12345-1234567-1";
     }
 
-    // FIX: Password is now validated independently of the CNIC result.
+
     if (!formData.password) {
       newErrors.password = "Password is required";
     } else if (formData.password.length < 6) {
@@ -68,7 +68,7 @@ const Login = () => {
   const togglePassword = () => setShowPassword((prev) => !prev);
 
   return (
-    <div className="login-container">
+    <div className="h-screen flex flex-col items-center justify-center bg-gray-100">
       <img src="/lo-go.png" alt="" />
       <div>
         <button>login</button>
@@ -97,7 +97,7 @@ const Login = () => {
             <input
               id="cnic"
               type="text"
-              name=""
+              name="cnic"
               value={formData.cnic}
               onChange={handleChange}
               placeholder="INTER VALID CNIC"
