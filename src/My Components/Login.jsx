@@ -18,7 +18,7 @@ function Login() {
                 <div className="container">
                     <div className="image-container">
                         <img src={logo} alt="" />
-                    </div>
+                    </div>  
                     <div className="portal-heading">
                         <h3>Student Portal</h3>
                     </div>
